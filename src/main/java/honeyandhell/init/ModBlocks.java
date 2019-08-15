@@ -1,5 +1,6 @@
 package honeyandhell.init;
 
+import honeyandhell.common.block.BeeNestBlock;
 import honeyandhell.common.util.inventory.ItemGroupHAH;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,6 +20,8 @@ public class ModBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
+        bee_nest = registerBlock(new BeeNestBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "bee_nest");
+
         empty_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "empty_honeycomb_block");
         honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "honeycomb_block");
         filled_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "filled_honeycomb_block");
