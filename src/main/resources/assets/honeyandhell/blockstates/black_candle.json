@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "candles=1": [
+            { "model": "honeyandhell:block/black_candle" }
+        ],
+        "candles=2": [
+            { "model": "honeyandhell:block/two_black_candles" }
+        ],
+        "candles=3": [
+            { "model": "honeyandhell:block/three_black_candles" }
+        ],
+        "candles=4": [
+            { "model": "honeyandhell:block/four_black_candles" }
+        ]
+  }
+}

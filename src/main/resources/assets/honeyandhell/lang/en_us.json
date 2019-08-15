@@ -14,8 +14,24 @@
 
   "block.honeyandhell.bee_nest": "Bee Nest",
   "block.honeyandhell.beehive": "Beehive",
+  "block.honeyandhell.black_candle": "Black Candle",
+  "block.honeyandhell.blue_candle": "Blue Candle",
+  "block.honeyandhell.brown_candle": "Brown Candle",
+  "block.honeyandhell.candle": "Candle",
+  "block.honeyandhell.cyan_candle": "Cyan Candle",
   "block.honeyandhell.empty_honeycomb_block": "Empty Honeycomb Block",
   "block.honeyandhell.filled_honeycomb_block": "Filled Honeycomb Block",
+  "block.honeyandhell.gray_candle": "Gray Candle",
+  "block.honeyandhell.green_candle": "Green Candle",
   "block.honeyandhell.honeycomb_block": "Honeycomb Block",
-  "block.honeyandhell.honey_extractor": "Honey Extractor"
+  "block.honeyandhell.light_blue_candle": "Light Blue Candle",
+  "block.honeyandhell.light_gray_candle": "Light Gray Candle",
+  "block.honeyandhell.lime_candle": "Lime Candle",
+  "block.honeyandhell.magenta_candle": "Magenta Candle",
+  "block.honeyandhell.orange_candle": "Orange Candle",
+  "block.honeyandhell.pink_candle": "Pink Candle",
+  "block.honeyandhell.purple_candle": "Purple Candle",
+  "block.honeyandhell.red_candle": "Red Candle",
+  "block.honeyandhell.white_candle": "White Candle",
+  "block.honeyandhell.yellow_candle": "Yellow Candle"
 }

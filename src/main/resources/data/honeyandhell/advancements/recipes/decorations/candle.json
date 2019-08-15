@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "honeyandhell:candle"
+    ]
+  },
+  "criteria": {
+    "has_beeswax": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "honeyandhell:beeswax"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "honeyandhell:candle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_beeswax",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -8,6 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.FallingBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.Items;
 import net.minecraft.state.IProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.tags.BlockTags;
@@ -32,17 +33,25 @@ public class BeeNestBlock extends HorizontalBlock
     }
 
     @Override
-    public void onBlockClicked(BlockState p_196270_1_, World p_196270_2_, BlockPos p_196270_3_, PlayerEntity p_196270_4_) {
-        this.blockFall(p_196270_2_, p_196270_3_);
+    public void onBlockClicked(BlockState p_196270_1_, World p_196270_2_, BlockPos p_196270_3_, PlayerEntity p_196270_4_)
+    {
+        if (p_196270_4_.getHeldItem(p_196270_4_.swingingHand).getItem() != Items.SHEARS) {
+            this.blockFall(p_196270_2_, p_196270_3_);
+        }
+        else
+        {
+            super.onBlockClicked(p_196270_1_, p_196270_2_, p_196270_3_, p_196270_4_);
+        }
     }
 
-    private void blockFall(World p_176503_1_, BlockPos p_176503_2_) {
-        if ((p_176503_1_.isAirBlock(p_176503_2_.down()) || canFallThrough(p_176503_1_.getBlockState(p_176503_2_.down())) && p_176503_2_.getY() >= 0) && !p_176503_1_.isRemote) {
-            FallingBlockEntity fallingblockentity = new FallingBlockEntity(p_176503_1_, (double)p_176503_2_.getX() + 0.5D, (double)p_176503_2_.getY(), (double)p_176503_2_.getZ() + 0.5D, p_176503_1_.getBlockState(p_176503_2_));
+    private void blockFall(World p_176503_1_, BlockPos p_176503_2_)
+    {
+        if (p_176503_2_.getY() >= 0 && !p_176503_1_.isRemote)
+        {
+            FallingBlockEntity fallingblockentity = new FallingBlockEntity(p_176503_1_, (double) p_176503_2_.getX() + 0.5D, (double) p_176503_2_.getY(), (double) p_176503_2_.getZ() + 0.5D, p_176503_1_.getBlockState(p_176503_2_));
             this.onStartFalling(fallingblockentity);
             p_176503_1_.addEntity(fallingblockentity);
         }
-
     }
 
     protected void onStartFalling(FallingBlockEntity p_149829_1_) {
@@ -90,7 +99,11 @@ public class BeeNestBlock extends HorizontalBlock
 
     @Override
     public BlockState updatePostPlacement(BlockState p_196271_1_, Direction p_196271_2_, BlockState p_196271_3_, IWorld p_196271_4_, BlockPos p_196271_5_, BlockPos p_196271_6_) {
-        return p_196271_2_ == p_196271_1_.get(HORIZONTAL_FACING) && !p_196271_1_.isValidPosition(p_196271_4_, p_196271_5_) ? Blocks.AIR.getDefaultState() : super.updatePostPlacement(p_196271_1_, p_196271_2_, p_196271_3_, p_196271_4_, p_196271_5_, p_196271_6_);
+        if (!p_196271_1_.isValidPosition(p_196271_4_, p_196271_5_)) {
+            this.blockFall(p_196271_4_.getWorld(), p_196271_5_);
+        }
+
+        return super.updatePostPlacement(p_196271_1_, p_196271_2_, p_196271_3_, p_196271_4_, p_196271_5_, p_196271_6_);
     }
 
     @Override
