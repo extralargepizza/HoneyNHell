@@ -3,7 +3,6 @@
 
   "item.honeyandhell.hah_icon": "H&H Icon",
   "item.honeyandhell.bee_larvae": "Bee Larvae",
-  "item.honeyandhell.bee_scoop": "Bee Scoop",
   "item.honeyandhell.beeswax": "Beeswax",
   "item.honeyandhell.drone_bee": "Drone Bee",
   "item.honeyandhell.filled_honeycomb": "Filled Honeycomb",
@@ -15,6 +14,8 @@
 
   "block.honeyandhell.bee_nest": "Bee Nest",
   "block.honeyandhell.beehive": "Beehive",
-  "block.honeyandhell.candle": "Candle"
+  "block.honeyandhell.empty_honeycomb_block": "Empty Honeycomb Block",
+  "block.honeyandhell.filled_honeycomb_block": "Filled Honeycomb Block",
+  "block.honeyandhell.honeycomb_block": "Honeycomb Block",
   "block.honeyandhell.honey_extractor": "Honey Extractor"
 }
