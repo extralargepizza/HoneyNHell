@@ -14,6 +14,6 @@ public class HAHItems
     public static Item honeycomb;
     public static Item filled_honeycomb;
     public static Item raw_honey;
-    public static Item beeswax;
     public static Item royal_jelly;
+    public static Item beeswax;
 }
