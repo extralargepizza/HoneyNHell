@@ -1,0 +1,20 @@
+{
+  "itemGroup.honeyandhell": "Honey & Hell",
+
+  "item.honeyandhell.hah_icon": "H&H Icon",
+  "item.honeyandhell.bee_larvae": "Bee Larvae",
+  "item.honeyandhell.bee_scoop": "Bee Scoop",
+  "item.honeyandhell.beeswax": "Beeswax",
+  "item.honeyandhell.drone_bee": "Drone Bee",
+  "item.honeyandhell.filled_honeycomb": "Filled Honeycomb",
+  "item.honeyandhell.honeycomb": "Honeycomb",
+  "item.honeyandhell.queen_bee": "Queen Bee",
+  "item.honeyandhell.raw_honey": "Raw Honey",
+  "item.honeyandhell.royal_jelly": "Royal Jelly",
+  "item.honeyandhell.worker_bee": "Worker Bee",
+
+  "block.honeyandhell.bee_nest": "Bee Nest",
+  "block.honeyandhell.beehive": "Beehive",
+  "block.honeyandhell.candle": "Candle"
+  "block.honeyandhell.honey_extractor": "Honey Extractor"
+}
