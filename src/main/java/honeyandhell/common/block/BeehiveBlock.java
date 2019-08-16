@@ -65,9 +65,8 @@ public class BeehiveBlock extends HorizontalBlock
         if (!this.isValidPosition(p_196271_1_, p_196271_4_, p_196271_5_)) {
             return Blocks.AIR.getDefaultState();
         }
-        else {
-            return super.updatePostPlacement(p_196271_1_, p_196271_2_, p_196271_3_, p_196271_4_, p_196271_5_, p_196271_6_);
-        }
+
+        return super.updatePostPlacement(p_196271_1_, p_196271_2_, p_196271_3_, p_196271_4_, p_196271_5_, p_196271_6_);
     }
 
     @Override

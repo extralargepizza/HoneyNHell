@@ -16,4 +16,6 @@ public class HAHItems
     public static Item raw_honey;
     public static Item royal_jelly;
     public static Item beeswax;
+
+    public static Item net;
 }

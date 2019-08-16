@@ -106,7 +106,7 @@ curseforge {
             releaseType = 'alpha'
 
             mainArtifact(jar) {
-                displayName = "Honey & Hell ${version}"
+                displayName = "Honey and Hell ${version}"
             }
             addArtifact sourcesJar
             addArtifact deobfJar
@@ -146,7 +146,7 @@ uploadArchives {
                 project {
                     name project.archivesBaseName
                     packaging 'jar'
-                    description 'Honey & Hell'
+                    description 'Honey and Hell'
                     url 'https://github.com/Glitchfiend/HoneyAndHell'
                 
                     scm {

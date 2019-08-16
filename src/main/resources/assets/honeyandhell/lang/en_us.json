@@ -1,12 +1,13 @@
 {
-  "itemGroup.honeyandhell": "Honey & Hell",
+  "itemGroup.honeyandhell": "Honey and Hell",
 
-  "item.honeyandhell.hah_icon": "H&H Icon",
+  "item.honeyandhell.hah_icon": "HAH Icon",
   "item.honeyandhell.bee_larvae": "Bee Larvae",
   "item.honeyandhell.beeswax": "Beeswax",
   "item.honeyandhell.drone_bee": "Drone Bee",
   "item.honeyandhell.filled_honeycomb": "Filled Honeycomb",
   "item.honeyandhell.honeycomb": "Honeycomb",
+  "item.honeyandhell.net": "Net",
   "item.honeyandhell.queen_bee": "Queen Bee",
   "item.honeyandhell.raw_honey": "Raw Honey",
   "item.honeyandhell.royal_jelly": "Royal Jelly",

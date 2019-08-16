@@ -1,5 +1,6 @@
 package honeyandhell.common.block;
 
+import honeyandhell.api.block.HAHBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -8,6 +9,7 @@ import net.minecraft.entity.item.FallingBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.Items;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.IProperty;
 import net.minecraft.state.StateContainer;
@@ -31,11 +33,12 @@ import java.util.Random;
 
 public class BeeNestBlock extends FallingBlock {
     public static final DirectionProperty HORIZONTAL_FACING;
+    public static final BooleanProperty OCCUPIED;
     protected static final VoxelShape SHAPE;
 
     public BeeNestBlock(Properties p_i48426_1_) {
         super(p_i48426_1_);
-        this.setDefaultState(((BlockState) this.stateContainer.getBaseState()).with(HORIZONTAL_FACING, Direction.NORTH));
+        this.setDefaultState(((BlockState) this.stateContainer.getBaseState()).with(HORIZONTAL_FACING, Direction.NORTH).with(OCCUPIED, true));
     }
 
     @Override
@@ -63,7 +66,11 @@ public class BeeNestBlock extends FallingBlock {
 
     @Override
     public void onBlockClicked(BlockState p_196270_1_, World p_196270_2_, BlockPos p_196270_3_, PlayerEntity p_196270_4_) {
-        this.blockFall(p_196270_2_, p_196270_3_);
+        if (p_196270_1_.getBlock() == HAHBlocks.bee_nest)
+        {
+            p_196270_2_.setBlockState(p_196270_3_, p_196270_1_.with(OCCUPIED, false), 2);
+            this.blockFall(p_196270_2_, p_196270_3_);
+        }
     }
 
     private void blockFall(World p_176503_1_, BlockPos p_176503_2_) {
@@ -113,7 +120,7 @@ public class BeeNestBlock extends FallingBlock {
         for(int var7 = 0; var7 < var6; ++var7) {
             Direction direction = var5[var7];
             if (direction.getAxis().isHorizontal()) {
-                blockstate = (BlockState)blockstate.with(HORIZONTAL_FACING, direction);
+                blockstate = (BlockState)blockstate.with(HORIZONTAL_FACING, direction).with(OCCUPIED, false);
                 if (blockstate.isValidPosition(iworldreader, blockpos)) {
                     return blockstate;
                 }
@@ -125,7 +132,8 @@ public class BeeNestBlock extends FallingBlock {
 
     @Override
     public BlockState updatePostPlacement(BlockState p_196271_1_, Direction p_196271_2_, BlockState p_196271_3_, IWorld p_196271_4_, BlockPos p_196271_5_, BlockPos p_196271_6_) {
-        if (!this.isValidPosition(p_196271_1_,p_196271_4_, p_196271_5_)) {
+        if (!this.isValidPosition(p_196271_1_,p_196271_4_, p_196271_5_))
+        {
             this.blockFall(p_196271_4_.getWorld(), p_196271_5_);
         }
 
@@ -134,11 +142,12 @@ public class BeeNestBlock extends FallingBlock {
 
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> p_206840_1_) {
-        p_206840_1_.add(new IProperty[]{HORIZONTAL_FACING});
+        p_206840_1_.add(new IProperty[]{HORIZONTAL_FACING, OCCUPIED});
     }
 
     static {
         HORIZONTAL_FACING = BlockStateProperties.HORIZONTAL_FACING;
+        OCCUPIED = BooleanProperty.create("occupied");
         SHAPE = Block.makeCuboidShape(3.0D, 6.0D, 3.0D, 13.0D, 16.0D, 13.0D);
     }
 }

@@ -8,6 +8,7 @@
 
 package honeyandhell.core;
 
+import honeyandhell.init.ModGeneration;
 import net.minecraft.server.dedicated.ServerProperties;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
@@ -52,6 +53,6 @@ public class HoneyAndHell
 
     private void loadComplete(final FMLLoadCompleteEvent event)
     {
-
+        ModGeneration.setup();
     }
 }

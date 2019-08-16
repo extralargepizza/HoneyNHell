@@ -7,7 +7,7 @@ authors="Adubbz, Forstride"
 [[mods]]
     modId="honeyandhell"
     version="${version}"
-    displayName="Honey & Hell"
+    displayName="Honey and Hell"
     description='''
     Ghastly bees.
     '''
