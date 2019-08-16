@@ -1,13 +1,13 @@
 package honeyandhell.common.block;
 
 import honeyandhell.api.block.HAHBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FallingBlock;
+import honeyandhell.api.item.HAHItems;
+import net.minecraft.block.*;
 import net.minecraft.entity.item.FallingBlockEntity;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
@@ -15,10 +15,9 @@ import net.minecraft.state.IProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
@@ -39,6 +38,31 @@ public class BeeNestBlock extends FallingBlock {
     public BeeNestBlock(Properties p_i48426_1_) {
         super(p_i48426_1_);
         this.setDefaultState(((BlockState) this.stateContainer.getBaseState()).with(HORIZONTAL_FACING, Direction.NORTH).with(OCCUPIED, true));
+    }
+
+    @Override
+    public boolean onBlockActivated(BlockState p_220051_1_, World p_220051_2_, BlockPos p_220051_3_, PlayerEntity p_220051_4_, Hand p_220051_5_, BlockRayTraceResult p_220051_6_) {
+        ItemStack lvt_7_1_ = p_220051_4_.getHeldItem(p_220051_5_);
+        if (lvt_7_1_.getItem() == HAHItems.net) {
+            if (!p_220051_2_.isRemote) {
+                if (p_220051_2_.getBlockState(p_220051_3_).get(OCCUPIED)) {
+                    //p_220051_2_.playSound((PlayerEntity)null, p_220051_3_, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    p_220051_2_.setBlockState(p_220051_3_, p_220051_2_.getBlockState(p_220051_3_).with(OCCUPIED, false), 11);
+                    ItemEntity lvt_10_1_ = new ItemEntity(p_220051_2_, (double) p_220051_3_.getX() + 0.5D, (double) p_220051_3_.getY() + 0.1D, (double) p_220051_3_.getZ() + 0.5D, new ItemStack(HAHItems.bee_larvae, 1));
+                    lvt_10_1_.setMotion(0.05D * p_220051_2_.rand.nextDouble() * 0.02D, 0.05D, 0.05D * p_220051_2_.rand.nextDouble() * 0.02D);
+                    p_220051_2_.addEntity(lvt_10_1_);
+                }
+
+                this.blockFall(p_220051_2_, p_220051_3_);
+                lvt_7_1_.damageItem(1, p_220051_4_, (p_220282_1_) -> {
+                    p_220282_1_.sendBreakAnimation(p_220051_5_);
+                });
+            }
+
+            return true;
+        } else {
+            return super.onBlockActivated(p_220051_1_, p_220051_2_, p_220051_3_, p_220051_4_, p_220051_5_, p_220051_6_);
+        }
     }
 
     @Override
@@ -89,6 +113,9 @@ public class BeeNestBlock extends FallingBlock {
     public void onEndFalling(World p_176502_1_, BlockPos p_176502_2_, BlockState p_176502_3_, BlockState p_176502_4_)
     {
         p_176502_1_.setBlockState(p_176502_2_, Blocks.AIR.getDefaultState(), 2);
+        ItemEntity lvt_10_1_ = new ItemEntity(p_176502_1_, (double) p_176502_2_.getX() + 0.5D, (double) p_176502_2_.getY() + 0.1D, (double) p_176502_2_.getZ() + 0.5D, new ItemStack(HAHBlocks.bee_nest.getDefaultState().with(OCCUPIED, false).getBlock(), 1));
+        lvt_10_1_.setMotion(0.05D * p_176502_1_.rand.nextDouble() * 0.02D, 0.05D, 0.05D * p_176502_1_.rand.nextDouble() * 0.02D);
+        p_176502_1_.addEntity(lvt_10_1_);
     }
 
     @OnlyIn(Dist.CLIENT)
