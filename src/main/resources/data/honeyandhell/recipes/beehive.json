@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "PHP",
+	"PPP"
+  ],
+  "key": {
+    "H": {
+      "item": "honeyandhell:honeycomb"
+    },
+	"P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "result": {
+    "item": "honeyandhell:beehive",
+    "count": 1
+  }
+}

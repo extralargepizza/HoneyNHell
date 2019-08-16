@@ -125,7 +125,7 @@ public class BeeNestBlock extends FallingBlock {
 
     @Override
     public BlockState updatePostPlacement(BlockState p_196271_1_, Direction p_196271_2_, BlockState p_196271_3_, IWorld p_196271_4_, BlockPos p_196271_5_, BlockPos p_196271_6_) {
-        if (!p_196271_1_.isValidPosition(p_196271_4_, p_196271_5_)) {
+        if (!this.isValidPosition(p_196271_1_,p_196271_4_, p_196271_5_)) {
             this.blockFall(p_196271_4_.getWorld(), p_196271_5_);
         }
 

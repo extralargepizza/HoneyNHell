@@ -1,9 +1,11 @@
 package honeyandhell.init;
 
 import honeyandhell.common.block.BeeNestBlock;
+import honeyandhell.common.block.BeehiveBlock;
 import honeyandhell.common.block.CandleBlock;
 import honeyandhell.common.util.inventory.ItemGroupHAH;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -45,6 +47,7 @@ public class ModBlocks
         wasp_nest_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "wasp_nest_block");
 
         bee_nest = registerBlock(new BeeNestBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(3.0F, 9.0F)), "bee_nest");
+        beehive = registerBlock(new BeehiveBlock(Block.Properties.from(Blocks.OAK_PLANKS)), "beehive");
     }
 
     public static Block registerBlock(Block block, String name)

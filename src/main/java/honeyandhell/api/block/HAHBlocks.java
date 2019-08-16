@@ -27,5 +27,6 @@ public class HAHBlocks
     public static Block filled_honeycomb_block;
     public static Block wasp_nest_block;
 
+    public static Block beehive;
     public static Block bee_nest;
 }

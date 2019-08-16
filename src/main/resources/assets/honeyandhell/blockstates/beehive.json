@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "honeyandhell:block/beehive" },
+        "facing=west": { "model": "honeyandhell:block/beehive", "y": 90 },
+        "facing=north": { "model": "honeyandhell:block/beehive", "y": 180 },
+        "facing=east": { "model": "honeyandhell:block/beehive", "y": 270 }
+    }
+}

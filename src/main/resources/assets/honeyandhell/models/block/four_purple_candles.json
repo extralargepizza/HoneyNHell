@@ -1,0 +1,7 @@
+{
+    "parent": "honeyandhell:block/four_candles",
+    "textures": {
+        "particle": "honeyandhell:block/purple_candle",
+        "all": "honeyandhell:block/purple_candle"
+    }
+}

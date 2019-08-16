@@ -1,0 +1,30 @@
+{
+    "parent": "block/block",
+	"ambientocclusion": false,
+    "textures": {
+	    "particle": "honeyandhell:block/beehive_side",
+        "front": "honeyandhell:block/beehive_front",
+        "side": "honeyandhell:block/beehive_side",
+        "top": "honeyandhell:block/beehive_top"
+    },
+    "elements": [
+        {
+            "from": [ 1.0, 0.0, 1.0 ], 
+            "to": [ 15.0, 16.0, 15.0 ], 
+            "faces": {
+                "north": { "texture": "#front", "uv": [ 1.0, 0.0, 15.0, 16.0 ] },
+                "east": { "texture": "#side", "uv": [ 1.0, 0.0, 15.0, 16.0 ] },
+                "south": { "texture": "#side", "uv": [ 1.0, 0.0, 15.0, 16.0 ] },
+                "west": { "texture": "#side", "uv": [ 1.0, 0.0, 15.0, 16.0 ] },
+                "up": { "texture": "#top", "uv": [ 1.0, 1.0, 15.0, 15.0 ] }
+            }
+        },
+        {
+            "from": [ 1.0, 2.0, 1.0 ], 
+            "to": [ 15.0, 2.0, 15.0 ], 
+            "faces": {
+                "down": { "texture": "#top", "uv": [ 1.0, 1.0, 15.0, 15.0 ] }
+            }
+        }
+    ]
+}

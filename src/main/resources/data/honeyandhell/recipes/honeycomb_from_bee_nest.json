@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "honeyandhell:bee_nest"
+    }
+  ],
+  "result": {
+    "item": "honeyandhell:honeycomb"
+  }
+}
