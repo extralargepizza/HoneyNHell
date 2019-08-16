@@ -28,10 +28,10 @@ public class BeeNestFeature extends Feature<NoFeatureConfig>
     {
         int i = 0;
 
-        for(int j = 0; j < 8; ++j)
+        for(int j = 0; j < 16; ++j)
         {
             BlockPos blockpos = p_212245_4_.add(p_212245_3_.nextInt(8) - p_212245_3_.nextInt(8), p_212245_3_.nextInt(8) - p_212245_3_.nextInt(8), p_212245_3_.nextInt(8) - p_212245_3_.nextInt(8));
-            if (p_212245_1_.getBlockState(blockpos).isAir(p_212245_1_, blockpos) && p_212245_1_.getBlockState(blockpos.down()).isAir(p_212245_1_, blockpos.down()) && p_212245_1_.getBlockState(blockpos.up()).getBlock().isIn(BlockTags.LEAVES))
+            if (p_212245_1_.getBlockState(blockpos).isAir(p_212245_1_, blockpos) && p_212245_1_.getBlockState(blockpos.down()).isAir(p_212245_1_, blockpos.down()) && p_212245_1_.getBlockState(blockpos.up()).getBlock().isIn(BlockTags.LEAVES) && !p_212245_1_.getBlockState(blockpos.up().north()).isAir(p_212245_1_, blockpos.up().north()) && !p_212245_1_.getBlockState(blockpos.up().south()).isAir(p_212245_1_, blockpos.up().south()) && !p_212245_1_.getBlockState(blockpos.up().east()).isAir(p_212245_1_, blockpos.up().east()) && !p_212245_1_.getBlockState(blockpos.up().west()).isAir(p_212245_1_, blockpos.up().west()))
             {
                 p_212245_1_.setBlockState(blockpos, HAHBlocks.bee_nest.getDefaultState().with(BeeNestBlock.HORIZONTAL_FACING, Direction.byIndex(2 + p_212245_3_.nextInt(4))), 2);
 
