@@ -23,6 +23,8 @@ public class ModItems
     {
         net = registerItem(new NetItem(new Item.Properties().group(ItemGroupHAH.instance).maxStackSize(1).maxDamage(64)), "net");
 
+        bottle_of_mead = registerItem(new BottleOfMeadItem(new Item.Properties().group(ItemGroupHAH.instance).maxStackSize(1)), "bottle_of_mead");
+
         honeycomb = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance)), "honeycomb");
         filled_honeycomb = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance).food(FILLED_HONEYCOMB)), "filled_honeycomb");
         beeswax = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance)), "beeswax");
