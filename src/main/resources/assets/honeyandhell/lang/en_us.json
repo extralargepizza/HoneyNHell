@@ -1,8 +1,9 @@
 {
   "itemGroup.honeyandhell": "Honey and Hell",
+  "container.beehive": "Beehive",
 
   "item.honeyandhell.hah_icon": "HAH Icon",
-  "item.honeyandhell.bee_larvae": "Bee Larvae",
+  "item.honeyandhell.bee_larva": "Bee Larva",
   "item.honeyandhell.beeswax": "Beeswax",
   "item.honeyandhell.drone_bee": "Drone Bee",
   "item.honeyandhell.filled_honeycomb": "Filled Honeycomb",

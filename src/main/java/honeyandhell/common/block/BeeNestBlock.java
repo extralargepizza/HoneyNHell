@@ -7,6 +7,7 @@ import net.minecraft.entity.item.FallingBlockEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.state.BooleanProperty;
@@ -48,9 +49,12 @@ public class BeeNestBlock extends FallingBlock {
                 if (p_220051_2_.getBlockState(p_220051_3_).get(OCCUPIED)) {
                     //p_220051_2_.playSound((PlayerEntity)null, p_220051_3_, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     p_220051_2_.setBlockState(p_220051_3_, p_220051_2_.getBlockState(p_220051_3_).with(OCCUPIED, false), 11);
-                    ItemEntity lvt_10_1_ = new ItemEntity(p_220051_2_, (double) p_220051_3_.getX() + 0.5D, (double) p_220051_3_.getY() + 0.1D, (double) p_220051_3_.getZ() + 0.5D, new ItemStack(HAHItems.bee_larvae, 1));
-                    lvt_10_1_.setMotion(0.05D * p_220051_2_.rand.nextDouble() * 0.02D, 0.05D, 0.05D * p_220051_2_.rand.nextDouble() * 0.02D);
-                    p_220051_2_.addEntity(lvt_10_1_);
+
+                    Item bee_item = HAHItems.bee_larva;
+                    if (!p_220051_4_.inventory.addItemStackToInventory(new ItemStack(bee_item)))
+                    {
+                        p_220051_4_.dropItem(new ItemStack(bee_item), false);
+                    }
                 }
 
                 this.blockFall(p_220051_2_, p_220051_3_);
