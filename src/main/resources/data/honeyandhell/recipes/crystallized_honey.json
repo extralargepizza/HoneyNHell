@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HH",
+    "HH"
+  ],
+  "key": {
+    "H": {
+      "item": "honeyandhell:raw_honey"
+    }
+  },
+  "result": {
+    "item": "honeyandhell:crystallized_honey",
+    "count": 1
+  }
+}

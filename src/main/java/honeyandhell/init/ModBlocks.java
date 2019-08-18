@@ -3,6 +3,7 @@ package honeyandhell.init;
 import honeyandhell.common.block.BeeNestBlock;
 import honeyandhell.common.block.BeehiveBlock;
 import honeyandhell.common.block.CandleBlock;
+import honeyandhell.common.block.CrystallizedHoneyBlock;
 import honeyandhell.common.util.inventory.ItemGroupHAH;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -25,10 +26,11 @@ public class ModBlocks
     {
         bee_nest = registerBlock(new BeeNestBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(3.0F, 9.0F)), "bee_nest");
 
+        wasp_nest_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "wasp_nest_block");
         empty_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "empty_honeycomb_block");
         honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "honeycomb_block");
         filled_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "filled_honeycomb_block");
-        wasp_nest_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "wasp_nest_block");
+        crystallized_honey = registerBlock(new CrystallizedHoneyBlock(Block.Properties.create(Material.GLASS, MaterialColor.YELLOW).hardnessAndResistance(0.3F)), "crystallized_honey");
 
         beehive = registerBlock(new BeehiveBlock(Block.Properties.from(Blocks.OAK_PLANKS)), "beehive");
 

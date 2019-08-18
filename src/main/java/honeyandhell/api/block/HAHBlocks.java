@@ -21,10 +21,11 @@ public class HAHBlocks
     public static Block red_candle;
     public static Block black_candle;
 
+    public static Block wasp_nest_block;
     public static Block empty_honeycomb_block;
     public static Block honeycomb_block;
     public static Block filled_honeycomb_block;
-    public static Block wasp_nest_block;
+    public static Block crystallized_honey;
 
     public static Block beehive;
     public static Block bee_nest;

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "honeyandhell:crystallized_honey"
+    ]
+  },
+  "criteria": {
+    "has_honey": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "honeyandhell:raw_honey"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "honeyandhell:crystallized_honey"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_honey",
+      "has_the_recipe"
+    ]
+  ]
+}

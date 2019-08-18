@@ -10,6 +10,7 @@ package honeyandhell.core;
 
 import honeyandhell.api.item.HAHItems;
 import honeyandhell.init.ModGeneration;
+import honeyandhell.init.ModVanillaCompat;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
@@ -50,7 +51,7 @@ public class HoneyAndHell
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        ModVanillaCompat.setup();
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
@@ -61,6 +62,5 @@ public class HoneyAndHell
     private void loadComplete(final FMLLoadCompleteEvent event)
     {
         ModGeneration.setup();
-        BrewingRecipeRegistry.addRecipe(Ingredient.fromStacks(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION), Potions.WATER)), Ingredient.fromStacks(new ItemStack(HAHItems.raw_honey)), new ItemStack(HAHItems.bottle_of_mead));
     }
 }
