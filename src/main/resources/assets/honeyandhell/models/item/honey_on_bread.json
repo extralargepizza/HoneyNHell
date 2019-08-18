@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "honeyandhell:item/candle"
+        "layer0": "honeyandhell:item/honey_on_bread"
     }
 }

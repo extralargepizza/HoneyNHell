@@ -1,15 +1,19 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "dyed_candle",
-  "ingredients": [
-    {
-      "item": "honeyandhell:candle"
-    },
-    {
-      "item": "minecraft:white_dye"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "B"
   ],
+  "key": {
+    "B": {
+      "item": "honeyandhell:beeswax"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
   "result": {
-    "item": "honeyandhell:white_candle"
+    "item": "honeyandhell:white_candle",
+    "count": 1
   }
 }

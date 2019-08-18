@@ -32,7 +32,6 @@ public class ModBlocks
 
         beehive = registerBlock(new BeehiveBlock(Block.Properties.from(Blocks.OAK_PLANKS)), "beehive");
 
-        candle = registerBlock(new CandleBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).lightValue(6).hardnessAndResistance(0.1F)), "candle");
         white_candle = registerBlock(new CandleBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SNOW).lightValue(6).hardnessAndResistance(0.1F)), "white_candle");
         orange_candle = registerBlock(new CandleBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ADOBE).lightValue(6).hardnessAndResistance(0.1F)), "orange_candle");
         magenta_candle = registerBlock(new CandleBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.MAGENTA).lightValue(6).hardnessAndResistance(0.1F)), "magenta_candle");

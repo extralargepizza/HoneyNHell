@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_candle": {
+    "has_beeswax": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "honeyandhell:candle"
+            "item": "honeyandhell:beeswax"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_candle",
+      "has_beeswax",
       "has_the_recipe"
     ]
   ]

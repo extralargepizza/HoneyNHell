@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 
 public class HAHBlocks
 {
-    public static Block candle;
     public static Block white_candle;
     public static Block orange_candle;
     public static Block magenta_candle;

@@ -7,6 +7,7 @@ public class HAHItems
     public static Item hah_icon;
 
     public static Item net;
+    public static Item honey_on_bread;
     public static Item bottle_of_mead;
 
     public static Item honeycomb;

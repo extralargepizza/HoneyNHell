@@ -1,9 +1,5 @@
 {
     "parent": "block/block",
-    "textures": {
-        "particle": "honeyandhell:block/candle",
-        "all": "honeyandhell:block/candle"
-    },
     "elements": [
         {   "from": [ 2, 0, 2 ],
             "to": [ 6, 6, 6 ],

@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "honeyandhell:candle"
+      "honeyandhell:honey_on_bread"
     ]
   },
   "criteria": {
-    "has_beeswax": {
+    "has_honey": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "honeyandhell:beeswax"
+            "item": "honeyandhell:raw_honey"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "honeyandhell:candle"
+        "recipe": "honeyandhell:honey_on_bread"
       }
     }
   },
   "requirements": [
     [
-      "has_beeswax",
+      "has_honey",
       "has_the_recipe"
     ]
   ]

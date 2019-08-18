@@ -3,7 +3,7 @@
   "group": "dyed_candle",
   "ingredients": [
     {
-      "item": "honeyandhell:candle"
+      "item": "honeyandhell:white_candle"
     },
     {
       "item": "minecraft:cyan_dye"
