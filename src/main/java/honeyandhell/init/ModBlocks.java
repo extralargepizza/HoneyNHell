@@ -7,6 +7,7 @@ import honeyandhell.common.block.CrystallizedHoneyBlock;
 import honeyandhell.common.util.inventory.ItemGroupHAH;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -24,13 +25,13 @@ public class ModBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        bee_nest = registerBlock(new BeeNestBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(3.0F, 9.0F)), "bee_nest");
+        bee_nest = registerBlock(new BeeNestBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(3.0F, 9.0F).sound(SoundType.CROP)), "bee_nest");
 
-        wasp_nest_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "wasp_nest_block");
-        empty_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "empty_honeycomb_block");
-        honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "honeycomb_block");
-        filled_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F)), "filled_honeycomb_block");
-        crystallized_honey = registerBlock(new CrystallizedHoneyBlock(Block.Properties.create(Material.GLASS, MaterialColor.YELLOW).hardnessAndResistance(0.3F)), "crystallized_honey");
+        wasp_nest_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.CROP)), "wasp_nest_block");
+        empty_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.CROP)), "empty_honeycomb_block");
+        honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.CROP)), "honeycomb_block");
+        filled_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.CROP)), "filled_honeycomb_block");
+        crystallized_honey = registerBlock(new CrystallizedHoneyBlock(Block.Properties.create(Material.GLASS, MaterialColor.YELLOW).hardnessAndResistance(0.3F).sound(SoundType.GLASS)), "crystallized_honey");
 
         beehive = registerBlock(new BeehiveBlock(Block.Properties.from(Blocks.OAK_PLANKS)), "beehive");
 
