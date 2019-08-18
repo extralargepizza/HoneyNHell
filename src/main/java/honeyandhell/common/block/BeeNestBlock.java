@@ -10,15 +10,13 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.IProperty;
-import net.minecraft.state.StateContainer;
+import net.minecraft.state.*;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
@@ -33,12 +31,12 @@ import java.util.Random;
 
 public class BeeNestBlock extends FallingBlock {
     public static final DirectionProperty HORIZONTAL_FACING;
-    public static final BooleanProperty OCCUPIED;
+    public static final IntegerProperty OCCUPANCY;
     protected static final VoxelShape SHAPE;
 
     public BeeNestBlock(Properties p_i48426_1_) {
         super(p_i48426_1_);
-        this.setDefaultState(((BlockState) this.stateContainer.getBaseState()).with(HORIZONTAL_FACING, Direction.NORTH).with(OCCUPIED, true));
+        this.setDefaultState(((BlockState) this.stateContainer.getBaseState()).with(HORIZONTAL_FACING, Direction.NORTH).with(OCCUPANCY, 8));
     }
 
     @Override
@@ -46,13 +44,12 @@ public class BeeNestBlock extends FallingBlock {
         ItemStack lvt_7_1_ = p_220051_4_.getHeldItem(p_220051_5_);
         if (lvt_7_1_.getItem() == HAHItems.net) {
             if (!p_220051_2_.isRemote) {
-                if (p_220051_2_.getBlockState(p_220051_3_).get(OCCUPIED)) {
+                if (p_220051_2_.getBlockState(p_220051_3_).get(OCCUPANCY) >= 8) {
                     //p_220051_2_.playSound((PlayerEntity)null, p_220051_3_, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                    p_220051_2_.setBlockState(p_220051_3_, p_220051_2_.getBlockState(p_220051_3_).with(OCCUPIED, false), 11);
+                    p_220051_2_.setBlockState(p_220051_3_, p_220051_2_.getBlockState(p_220051_3_).with(OCCUPANCY, 0), 11);
 
                     Item bee_item = HAHItems.bee_larva;
-                    if (!p_220051_4_.inventory.addItemStackToInventory(new ItemStack(bee_item)))
-                    {
+                    if (!p_220051_4_.inventory.addItemStackToInventory(new ItemStack(bee_item))) {
                         p_220051_4_.dropItem(new ItemStack(bee_item), false);
                     }
                 }
@@ -64,7 +61,23 @@ public class BeeNestBlock extends FallingBlock {
             }
 
             return true;
-        } else {
+        }
+        else if (lvt_7_1_.getItem() == HAHItems.bee_larva || lvt_7_1_.getItem() == HAHItems.worker_bee || lvt_7_1_.getItem() == HAHItems.drone_bee || lvt_7_1_.getItem() == HAHItems.queen_bee)
+        {
+            if (!p_220051_2_.isRemote) {
+                int occupancy = p_220051_1_.get(OCCUPANCY);
+                //p_220051_2_.playSound((PlayerEntity)null, p_220051_3_, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                p_220051_2_.setBlockState(p_220051_3_, p_220051_2_.getBlockState(p_220051_3_).with(OCCUPANCY, MathHelper.clamp(occupancy + 1, 0, 8)), 11);
+
+                if (!p_220051_4_.abilities.isCreativeMode) {
+                    lvt_7_1_.shrink(1);
+                }
+            }
+
+            return true;
+        }
+        else
+        {
             return super.onBlockActivated(p_220051_1_, p_220051_2_, p_220051_3_, p_220051_4_, p_220051_5_, p_220051_6_);
         }
     }
@@ -96,7 +109,7 @@ public class BeeNestBlock extends FallingBlock {
     public void onBlockClicked(BlockState p_196270_1_, World p_196270_2_, BlockPos p_196270_3_, PlayerEntity p_196270_4_) {
         if (p_196270_1_.getBlock() == HAHBlocks.bee_nest)
         {
-            p_196270_2_.setBlockState(p_196270_3_, p_196270_1_.with(OCCUPIED, false), 2);
+            p_196270_2_.setBlockState(p_196270_3_, p_196270_1_.with(OCCUPANCY, 0), 2);
             this.blockFall(p_196270_2_, p_196270_3_);
         }
     }
@@ -117,7 +130,7 @@ public class BeeNestBlock extends FallingBlock {
     public void onEndFalling(World p_176502_1_, BlockPos p_176502_2_, BlockState p_176502_3_, BlockState p_176502_4_)
     {
         p_176502_1_.setBlockState(p_176502_2_, Blocks.AIR.getDefaultState(), 2);
-        ItemEntity lvt_10_1_ = new ItemEntity(p_176502_1_, (double) p_176502_2_.getX() + 0.5D, (double) p_176502_2_.getY() + 0.1D, (double) p_176502_2_.getZ() + 0.5D, new ItemStack(HAHBlocks.bee_nest.getDefaultState().with(OCCUPIED, false).getBlock(), 1));
+        ItemEntity lvt_10_1_ = new ItemEntity(p_176502_1_, (double) p_176502_2_.getX() + 0.5D, (double) p_176502_2_.getY() + 0.1D, (double) p_176502_2_.getZ() + 0.5D, new ItemStack(HAHBlocks.bee_nest.getDefaultState().with(OCCUPANCY, 0).getBlock(), 1));
         lvt_10_1_.setMotion(0.05D * p_176502_1_.rand.nextDouble() * 0.02D, 0.05D, 0.05D * p_176502_1_.rand.nextDouble() * 0.02D);
         p_176502_1_.addEntity(lvt_10_1_);
     }
@@ -151,7 +164,7 @@ public class BeeNestBlock extends FallingBlock {
         for(int var7 = 0; var7 < var6; ++var7) {
             Direction direction = var5[var7];
             if (direction.getAxis().isHorizontal()) {
-                blockstate = (BlockState)blockstate.with(HORIZONTAL_FACING, direction).with(OCCUPIED, false);
+                blockstate = (BlockState)blockstate.with(HORIZONTAL_FACING, direction).with(OCCUPANCY, 0);
                 if (blockstate.isValidPosition(iworldreader, blockpos)) {
                     return blockstate;
                 }
@@ -173,12 +186,12 @@ public class BeeNestBlock extends FallingBlock {
 
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> p_206840_1_) {
-        p_206840_1_.add(new IProperty[]{HORIZONTAL_FACING, OCCUPIED});
+        p_206840_1_.add(new IProperty[]{HORIZONTAL_FACING, OCCUPANCY});
     }
 
     static {
         HORIZONTAL_FACING = BlockStateProperties.HORIZONTAL_FACING;
-        OCCUPIED = BooleanProperty.create("occupied");
+        OCCUPANCY = IntegerProperty.create("occupancy", 0, 8);
         SHAPE = Block.makeCuboidShape(3.0D, 6.0D, 3.0D, 13.0D, 16.0D, 13.0D);
     }
 }
