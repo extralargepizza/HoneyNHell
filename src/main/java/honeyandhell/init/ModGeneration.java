@@ -2,6 +2,7 @@ package honeyandhell.init;
 
 import com.google.common.collect.Lists;
 import honeyandhell.common.world.gen.feature.BeeNestFeature;
+import honeyandhell.common.world.gen.feature.NetherWaspNestFeature;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -18,6 +19,7 @@ import java.util.List;
 public class ModGeneration
 {
     public static final Feature<NoFeatureConfig> BEE_NEST = new BeeNestFeature(NoFeatureConfig::deserialize);
+    public static final Feature<NoFeatureConfig> NETHER_WASP_NEST = new NetherWaspNestFeature(NoFeatureConfig::deserialize);
 
     public static List<String> beeNestBiomes = Lists.newArrayList("minecraft:plains", "minecraft:sunflower_plains", "minecraft:forest", "minecraft:wooded_hills",
             "minecraft:flower_forest", "minecraft:dark_forest", "minecraft:dark_forest_hills", "minecraft:birch_forest", "minecraft:birch_forest_hills", "minecraft:tall_birch_forest",
@@ -29,8 +31,12 @@ public class ModGeneration
             "biomesoplenty:overgrown_cliffs", "biomesoplenty:prairie", "biomesoplenty:rainforest", "biomesoplenty:scrubland", "biomesoplenty:seasonal_forest",
             "biomesoplenty:shrubland", "biomesoplenty:tropical_rainforest", "biomesoplenty:woodland");
 
+    public static List<String> netherWaspNestBiomes = Lists.newArrayList("minecraft:nether",
+            "biomesoplenty:fungi_forest", "biomesoplenty:glowstone_grotto", "biomesoplenty:undergarden", "biomesoplenty:visceral_heap");
+
     public static void setup()
     {
+        //Bee Nests
         for (String biomeName : beeNestBiomes)
         {
             ResourceLocation loc = new ResourceLocation(biomeName);
@@ -39,6 +45,18 @@ public class ModGeneration
             {
                 Biome biome = ForgeRegistries.BIOMES.getValue(loc);
                 addFeature(biome, GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(BEE_NEST, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(8)));
+            }
+        }
+
+        //Nether Wasp Nests
+        for (String biomeName : netherWaspNestBiomes)
+        {
+            ResourceLocation loc = new ResourceLocation(biomeName);
+
+            if (ForgeRegistries.BIOMES.containsKey(loc))
+            {
+                Biome biome = ForgeRegistries.BIOMES.getValue(loc);
+                addFeature(biome, GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(NETHER_WASP_NEST, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(1)));
             }
         }
     }

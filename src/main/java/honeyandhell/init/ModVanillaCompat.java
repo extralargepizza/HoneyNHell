@@ -19,10 +19,10 @@ public class ModVanillaCompat
     public static void setup()
     {
         //Flammability
-        registerFlammable(HAHBlocks.wasp_nest_block, 5, 20);
-        registerFlammable(HAHBlocks.empty_honeycomb_block, 5, 20);
-        registerFlammable(HAHBlocks.honeycomb_block, 5, 20);
-        registerFlammable(HAHBlocks.filled_honeycomb_block, 5, 20);
+        registerFlammable(HAHBlocks.wasp_nest_block, 30, 60);
+        registerFlammable(HAHBlocks.empty_honeycomb_block, 30, 60);
+        registerFlammable(HAHBlocks.honeycomb_block, 30, 60);
+        registerFlammable(HAHBlocks.filled_honeycomb_block, 30, 60);
 
         //Compostable
         registerCompostable(0.3F, HAHBlocks.bee_nest);
