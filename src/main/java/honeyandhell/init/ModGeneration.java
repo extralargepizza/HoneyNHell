@@ -22,17 +22,18 @@ public class ModGeneration
     public static final Feature<NoFeatureConfig> NETHER_WASP_NEST = new NetherWaspNestFeature(NoFeatureConfig::deserialize);
 
     public static List<String> beeNestBiomes = Lists.newArrayList("minecraft:plains", "minecraft:sunflower_plains", "minecraft:forest", "minecraft:wooded_hills",
-            "minecraft:flower_forest", "minecraft:dark_forest", "minecraft:dark_forest_hills", "minecraft:birch_forest", "minecraft:birch_forest_hills", "minecraft:tall_birch_forest",
-            "minecraft:tall_birch_hills", "minecraft:savanna", "minecraft:savanna_plateau", "minecraft:shattered_savanna", "minecraft:shattered_savanna_plateau", "minecraft:jungle",
-            "minecraft:jungle_hills", "minecraft:jungle_edge", "minecraft:modified_jungle", "minecraft:modified_jungle_hills", "minecraft:bamboo_jungle", "minecraft:bamboo_jungle_hills",
+            "minecraft:flower_forest", "minecraft:birch_forest", "minecraft:birch_forest_hills", "minecraft:tall_birch_forest", "minecraft:tall_birch_hills",
+            "minecraft:savanna", "minecraft:savanna_plateau", "minecraft:shattered_savanna", "minecraft:shattered_savanna_plateau", "minecraft:jungle",
+            "minecraft:jungle_hills", "minecraft:jungle_edge", "minecraft:modified_jungle", "minecraft:modified_jungle_hills", "minecraft:bamboo_jungle",
+            "minecraft:bamboo_jungle_hills",
 
-            "biomesoplenty:brushland", "biomesoplenty:chaparral", "biomesoplenty:cherry_blossom_grove", "biomesoplenty:floodplain", "biomesoplenty:flower_meadow",
-            "biomesoplenty:grove", "biomesoplenty:lavender_field", "biomesoplenty:lush_grassland", "biomesoplenty:meadow", "biomesoplenty:orchard", "biomesoplenty:outback",
-            "biomesoplenty:overgrown_cliffs", "biomesoplenty:prairie", "biomesoplenty:rainforest", "biomesoplenty:scrubland", "biomesoplenty:seasonal_forest",
-            "biomesoplenty:shrubland", "biomesoplenty:tropical_rainforest", "biomesoplenty:woodland");
+            "biomesoplenty:chaparral", "biomesoplenty:cherry_blossom_grove", "biomesoplenty:flower_meadow", "biomesoplenty:grove", "biomesoplenty:lavender_field",
+            "biomesoplenty:lush_grassland", "biomesoplenty:meadow", "biomesoplenty:orchard", "biomesoplenty:overgrown_cliffs", "biomesoplenty:prairie",
+            "biomesoplenty:rainforest", "biomesoplenty:scrubland", "biomesoplenty:seasonal_forest", "biomesoplenty:shrubland", "biomesoplenty:tropical_rainforest",
+            "biomesoplenty:woodland");
 
     public static List<String> netherWaspNestBiomes = Lists.newArrayList("minecraft:nether",
-            "biomesoplenty:fungi_forest", "biomesoplenty:glowstone_grotto", "biomesoplenty:undergarden", "biomesoplenty:visceral_heap");
+            "biomesoplenty:ashen_inferno", "biomesoplenty:fungi_forest", "biomesoplenty:glowstone_grotto", "biomesoplenty:undergarden", "biomesoplenty:visceral_heap");
 
     public static void setup()
     {

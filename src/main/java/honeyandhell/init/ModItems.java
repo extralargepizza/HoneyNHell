@@ -23,13 +23,14 @@ public class ModItems
     {
         net = registerItem(new NetItem(new Item.Properties().group(ItemGroupHAH.instance).maxStackSize(1).maxDamage(64)), "net");
 
+        honeycomb = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance)), "honeycomb");
+        filled_honeycomb = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance).food(FILLED_HONEYCOMB)), "filled_honeycomb");
+
+        raw_honey = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance)), "raw_honey");
         honey_on_bread = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance).food(HONEY_ON_BREAD)), "honey_on_bread");
         bottle_of_mead = registerItem(new BottleOfMeadItem(new Item.Properties().group(ItemGroupHAH.instance).maxStackSize(1)), "bottle_of_mead");
 
-        honeycomb = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance)), "honeycomb");
-        filled_honeycomb = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance).food(FILLED_HONEYCOMB)), "filled_honeycomb");
         beeswax = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance)), "beeswax");
-        raw_honey = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance)), "raw_honey");
         royal_jelly = registerItem(new Item(new Item.Properties().group(ItemGroupHAH.instance)), "royal_jelly");
 
         bee_larva = registerItem(new BeeLarvaItem(new Item.Properties().group(ItemGroupHAH.instance).maxStackSize(1).rarity(Rarity.UNCOMMON)), "bee_larva");

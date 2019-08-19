@@ -7,6 +7,7 @@ import honeyandhell.common.block.CrystallizedHoneyBlock;
 import honeyandhell.common.util.inventory.ItemGroupHAH;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -25,15 +26,22 @@ public class ModBlocks
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
-        bee_nest = registerBlock(new BeeNestBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(3.0F, 9.0F).sound(SoundType.CROP)), "bee_nest");
+        bee_nest = registerBlock(new BeeNestBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(3.0F, 9.0F).sound(SoundType.PLANT)), "bee_nest");
 
-        wasp_nest_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.CROP)), "wasp_nest_block");
+        wasp_nest_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.PLANT)), "wasp_nest_block");
         empty_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.CROP)), "empty_honeycomb_block");
         honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.CROP)), "honeycomb_block");
         filled_honeycomb_block = registerBlock(new Block(Block.Properties.create(Material.ORGANIC, MaterialColor.SAND).hardnessAndResistance(0.1F).sound(SoundType.CROP)), "filled_honeycomb_block");
         crystallized_honey = registerBlock(new CrystallizedHoneyBlock(Block.Properties.create(Material.GLASS, MaterialColor.YELLOW).hardnessAndResistance(0.3F).sound(SoundType.GLASS)), "crystallized_honey");
 
-        beehive = registerBlock(new BeehiveBlock(Block.Properties.from(Blocks.OAK_PLANKS)), "beehive");
+        beehive = registerBlock(new BeehiveBlock(Block.Properties.create(Material.WOOD, MaterialColor.DIRT).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "beehive");
+
+        polished_oak_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.OAK_PLANKS)), "polished_oak_wood");
+        polished_spruce_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.SPRUCE_PLANKS)), "polished_spruce_wood");
+        polished_birch_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.BIRCH_PLANKS)), "polished_birch_wood");
+        polished_jungle_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.JUNGLE_PLANKS)), "polished_jungle_wood");
+        polished_acacia_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.ACACIA_PLANKS)), "polished_acacia_wood");
+        polished_dark_oak_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.DARK_OAK_PLANKS)), "polished_dark_oak_wood");
 
         white_candle = registerBlock(new CandleBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SNOW).lightValue(6).hardnessAndResistance(0.1F)), "white_candle");
         orange_candle = registerBlock(new CandleBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ADOBE).lightValue(6).hardnessAndResistance(0.1F)), "orange_candle");

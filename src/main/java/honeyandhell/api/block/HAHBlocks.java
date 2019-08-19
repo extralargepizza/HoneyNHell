@@ -4,6 +4,23 @@ import net.minecraft.block.Block;
 
 public class HAHBlocks
 {
+    public static Block bee_nest;
+
+    public static Block wasp_nest_block;
+    public static Block empty_honeycomb_block;
+    public static Block honeycomb_block;
+    public static Block filled_honeycomb_block;
+    public static Block crystallized_honey;
+
+    public static Block beehive;
+
+    public static Block polished_oak_wood;
+    public static Block polished_spruce_wood;
+    public static Block polished_birch_wood;
+    public static Block polished_jungle_wood;
+    public static Block polished_acacia_wood;
+    public static Block polished_dark_oak_wood;
+
     public static Block white_candle;
     public static Block orange_candle;
     public static Block magenta_candle;
@@ -20,13 +37,4 @@ public class HAHBlocks
     public static Block green_candle;
     public static Block red_candle;
     public static Block black_candle;
-
-    public static Block wasp_nest_block;
-    public static Block empty_honeycomb_block;
-    public static Block honeycomb_block;
-    public static Block filled_honeycomb_block;
-    public static Block crystallized_honey;
-
-    public static Block beehive;
-    public static Block bee_nest;
 }

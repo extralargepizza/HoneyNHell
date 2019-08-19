@@ -24,6 +24,13 @@ public class ModVanillaCompat
         registerFlammable(HAHBlocks.honeycomb_block, 30, 60);
         registerFlammable(HAHBlocks.filled_honeycomb_block, 30, 60);
 
+        registerFlammable(HAHBlocks.polished_oak_wood, 5, 20);
+        registerFlammable(HAHBlocks.polished_spruce_wood, 5, 20);
+        registerFlammable(HAHBlocks.polished_birch_wood, 5, 20);
+        registerFlammable(HAHBlocks.polished_jungle_wood, 5, 20);
+        registerFlammable(HAHBlocks.polished_acacia_wood, 5, 20);
+        registerFlammable(HAHBlocks.polished_dark_oak_wood, 5, 20);
+
         //Compostable
         registerCompostable(0.3F, HAHBlocks.bee_nest);
         registerCompostable(0.3F, HAHBlocks.wasp_nest_block);
