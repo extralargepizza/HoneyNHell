@@ -13,6 +13,7 @@ import net.minecraft.potion.PotionUtils;
 import net.minecraft.potion.Potions;
 import net.minecraft.util.IItemProvider;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraftforge.fml.ModList;
 
 public class ModVanillaCompat
 {
@@ -30,6 +31,22 @@ public class ModVanillaCompat
         registerFlammable(HAHBlocks.polished_jungle_wood, 5, 20);
         registerFlammable(HAHBlocks.polished_acacia_wood, 5, 20);
         registerFlammable(HAHBlocks.polished_dark_oak_wood, 5, 20);
+
+        if (ModList.get().isLoaded("biomesoplenty"))
+        {
+            registerFlammable(HAHBlocks.polished_fir_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_redwood_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_cherry_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_mahogany_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_jacaranda_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_palm_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_willow_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_dead_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_magic_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_umbran_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_hellbark_wood, 5, 20);
+            registerFlammable(HAHBlocks.polished_ethereal_wood, 5, 20);
+        }
 
         //Compostable
         registerCompostable(0.3F, HAHBlocks.bee_nest);

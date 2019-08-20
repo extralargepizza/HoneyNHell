@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "honeyandhell:block/polished_magic_wood_top",
+        "side": "honeyandhell:block/polished_magic_wood"
+    }
+}

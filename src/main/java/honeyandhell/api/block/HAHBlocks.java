@@ -21,6 +21,19 @@ public class HAHBlocks
     public static Block polished_acacia_wood;
     public static Block polished_dark_oak_wood;
 
+    public static Block polished_fir_wood;
+    public static Block polished_redwood_wood;
+    public static Block polished_cherry_wood;
+    public static Block polished_mahogany_wood;
+    public static Block polished_jacaranda_wood;
+    public static Block polished_palm_wood;
+    public static Block polished_willow_wood;
+    public static Block polished_dead_wood;
+    public static Block polished_magic_wood;
+    public static Block polished_umbran_wood;
+    public static Block polished_hellbark_wood;
+    public static Block polished_ethereal_wood;
+
     public static Block white_candle;
     public static Block orange_candle;
     public static Block magenta_candle;

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "honeyandhell:block/polished_cherry_wood" },
+        "axis=z":   { "model": "honeyandhell:block/polished_cherry_wood_horizontal" },
+        "axis=x":   { "model": "honeyandhell:block/polished_cherry_wood_horizontal", "y": 90 }
+    }
+}

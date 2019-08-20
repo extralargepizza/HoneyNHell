@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BSB",
+    "BSB",
+	"BSB"
+  ],
+  "key": {
+    "B": {
+      "item": "honeyandhell:beeswax"
+    },
+    "S": [
+      {
+        "item": "biomesoplenty:stripped_cherry_log"
+      },
+	  {
+        "item": "biomesoplenty:stripped_cherry_wood"
+      }
+    ]
+  },
+  "result": {
+    "item": "honeyandhell:polished_cherry_wood",
+    "count": 6
+  }
+}

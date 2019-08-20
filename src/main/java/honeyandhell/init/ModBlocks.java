@@ -15,6 +15,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -42,6 +43,22 @@ public class ModBlocks
         polished_jungle_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.JUNGLE_PLANKS)), "polished_jungle_wood");
         polished_acacia_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.ACACIA_PLANKS)), "polished_acacia_wood");
         polished_dark_oak_wood = registerBlock(new RotatedPillarBlock(Block.Properties.from(Blocks.DARK_OAK_PLANKS)), "polished_dark_oak_wood");
+
+        if (ModList.get().isLoaded("biomesoplenty"))
+        {
+            polished_fir_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_fir_wood");
+            polished_redwood_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.ORANGE_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_redwood_wood");
+            polished_cherry_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.RED).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_cherry_wood");
+            polished_mahogany_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.PINK_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_mahogany_wood");
+            polished_jacaranda_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.WHITE_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_jacaranda_wood");
+            polished_palm_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.YELLOW_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_palm_wood");
+            polished_willow_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.LIME_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_willow_wood");
+            polished_dead_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.STONE).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_dead_wood");
+            polished_magic_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLUE).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_magic_wood");
+            polished_umbran_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLUE_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_umbran_wood");
+            polished_hellbark_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.GRAY_TERRACOTTA).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_hellbark_wood");
+            polished_ethereal_wood = registerBlock(new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.QUARTZ).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)), "polished_ethereal_wood");
+        }
 
         white_candle = registerBlock(new CandleBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.SNOW).lightValue(6).hardnessAndResistance(0.1F)), "white_candle");
         orange_candle = registerBlock(new CandleBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ADOBE).lightValue(6).hardnessAndResistance(0.1F)), "orange_candle");

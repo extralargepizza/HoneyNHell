@@ -9,7 +9,7 @@ authors="Adubbz, Forstride"
     version="${version}"
     displayName="Honey and Hell"
     description='''
-    Ghastly bees.
+    Beekeeping and honey production!...With a sinister twist...
     '''
 
 [[dependencies.honeyandhell]]
