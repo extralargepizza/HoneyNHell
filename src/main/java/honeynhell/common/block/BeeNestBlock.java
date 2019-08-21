@@ -61,7 +61,7 @@ public class BeeNestBlock extends FallingBlock {
 
             return true;
         }
-        else if (lvt_7_1_.getItem() == HNHItems.bee_larva || lvt_7_1_.getItem() == HNHItems.worker_bee || lvt_7_1_.getItem() == HNHItems.drone_bee || lvt_7_1_.getItem() == HNHItems.queen_bee)
+        else if (lvt_7_1_.getItem() == HNHItems.bee_larva || lvt_7_1_.getItem() == HNHItems.bee || lvt_7_1_.getItem() == HNHItems.queen_bee)
         {
             if (!p_220051_2_.isRemote) {
                 int occupancy = p_220051_1_.get(OCCUPANCY);

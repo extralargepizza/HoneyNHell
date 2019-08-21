@@ -34,8 +34,7 @@ public class ModItems
         royal_jelly = registerItem(new Item(new Item.Properties().group(ItemGroupHNH.instance)), "royal_jelly");
 
         bee_larva = registerItem(new BeeLarvaItem(new Item.Properties().group(ItemGroupHNH.instance).maxStackSize(1).rarity(Rarity.UNCOMMON)), "bee_larva");
-        worker_bee = registerItem(new WorkerBeeItem(new Item.Properties().group(ItemGroupHNH.instance).maxStackSize(1).rarity(Rarity.UNCOMMON).maxDamage(16)), "worker_bee");
-        drone_bee = registerItem(new DroneBeeItem(new Item.Properties().group(ItemGroupHNH.instance).maxStackSize(1).rarity(Rarity.UNCOMMON).maxDamage(1)), "drone_bee");
+        bee = registerItem(new BeeItem(new Item.Properties().group(ItemGroupHNH.instance).maxStackSize(1).rarity(Rarity.UNCOMMON).maxDamage(16)), "bee");
         queen_bee = registerItem(new QueenBeeItem(new Item.Properties().group(ItemGroupHNH.instance).maxStackSize(1).rarity(Rarity.EPIC).maxDamage(32)), "queen_bee");
 
         hnh_icon = registerItem(new Item(new Item.Properties()), "hnh_icon");

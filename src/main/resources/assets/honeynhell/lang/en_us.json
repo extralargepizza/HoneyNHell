@@ -3,10 +3,10 @@
   "container.honeynhell.beehive": "Beehive",
 
   "item.honeynhell.hnh_icon": "HNH Icon",
+  "item.honeynhell.bee": "Bee",
   "item.honeynhell.bee_larva": "Bee Larva",
   "item.honeynhell.beeswax": "Beeswax",
   "item.honeynhell.bottle_of_mead": "Bottle of Mead",
-  "item.honeynhell.drone_bee": "Drone Bee",
   "item.honeynhell.filled_honeycomb": "Filled Honeycomb",
   "item.honeynhell.honeycomb": "Honeycomb",
   "item.honeynhell.honey_on_bread": "Honey on Bread",
@@ -14,7 +14,6 @@
   "item.honeynhell.queen_bee": "Queen Bee",
   "item.honeynhell.raw_honey": "Raw Honey",
   "item.honeynhell.royal_jelly": "Royal Jelly",
-  "item.honeynhell.worker_bee": "Worker Bee",
 
   "block.honeynhell.bee_nest": "Bee Nest",
   "block.honeynhell.beehive": "Beehive",

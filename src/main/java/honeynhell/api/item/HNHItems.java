@@ -20,7 +20,6 @@ public class HNHItems
     public static Item royal_jelly;
 
     public static Item bee_larva;
-    public static Item worker_bee;
-    public static Item drone_bee;
+    public static Item bee;
     public static Item queen_bee;
 }
