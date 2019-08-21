@@ -2,7 +2,7 @@ package honeyandhell.common.item;
 
 import net.minecraft.item.Item;
 
-public class BeeLarvaItem extends Item
+public class BeeLarvaItem extends BeeItem
 {
     public BeeLarvaItem(Properties p_i48517_1_)
     {

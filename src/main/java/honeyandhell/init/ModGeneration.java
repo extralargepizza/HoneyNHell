@@ -45,7 +45,7 @@ public class ModGeneration
             if (ForgeRegistries.BIOMES.containsKey(loc))
             {
                 Biome biome = ForgeRegistries.BIOMES.getValue(loc);
-                addFeature(biome, GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(BEE_NEST, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(8)));
+                addFeature(biome, GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(BEE_NEST, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(9)));
             }
         }
 
