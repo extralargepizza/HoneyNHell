@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "honeynhell:bee_nest"
+    }
+  ],
+  "result": {
+    "item": "honeynhell:filled_honeycomb",
+	"count": 1
+  }
+}

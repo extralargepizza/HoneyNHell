@@ -1,7 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "honeyandhell:block/polished_palm_wood_top",
-        "side": "honeyandhell:block/polished_palm_wood"
-    }
-}

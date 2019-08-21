@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "honeyandhell:block/honeycomb_block"
-    }
-}

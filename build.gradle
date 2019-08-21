@@ -20,7 +20,7 @@ apply plugin: 'idea'
 apply plugin: 'maven'
 
 group = "com.github.glitchfiend.biomesoplenty"
-archivesBaseName = "HoneyAndHell"
+archivesBaseName = "HoneyNHell"
 
 def getGitHash = {
     def stdout = new ByteArrayOutputStream()
@@ -81,17 +81,17 @@ task deobfJar(type: Jar) {
 
 task apiJar(type: Jar) {
     from(sourceSets.main.allJava) {
-        include 'honeyandhell/api/**'
+        include 'honeynhell/api/**'
     }
     from (sourceSets.main.output) {
         include 'LICENSE.txt'
-        include 'honeyandhell/api/**'
+        include 'honeynhell/api/**'
     }
 
     classifier = 'api'
 }
 
-def changelog_file = rootProject.file("build/HoneyAndHell-${version}-changelog.txt")
+def changelog_file = rootProject.file("build/HoneyNHell-${version}-changelog.txt")
 
 curseforge {
     if (project.hasProperty('curseApiKey')) {
@@ -106,7 +106,7 @@ curseforge {
             releaseType = 'alpha'
 
             mainArtifact(jar) {
-                displayName = "Honey and Hell ${version}"
+                displayName = "Honey 'n' Hell ${version}"
             }
             addArtifact sourcesJar
             addArtifact deobfJar
@@ -146,18 +146,18 @@ uploadArchives {
                 project {
                     name project.archivesBaseName
                     packaging 'jar'
-                    description 'Honey and Hell'
-                    url 'https://github.com/Glitchfiend/HoneyAndHell'
+                    description 'Honey n Hell'
+                    url 'https://github.com/Glitchfiend/HoneyNHell'
                 
                     scm {
-                        url 'https://github.com/Glitchfiend/HoneyAndHell'
-                        connection 'scm:git:git://github.com/Glitchfiend/HoneyAndHell.git'
-                        developerConnection 'scm:git:git@github.com:Glitchfiend/HoneyAndHell.git'
+                        url 'https://github.com/Glitchfiend/HoneyNHell'
+                        connection 'scm:git:git://github.com/Glitchfiend/HoneyNHell.git'
+                        developerConnection 'scm:git:git@github.com:Glitchfiend/HoneyNHell.git'
                     }
                 
                     issueManagement {
                         system 'github'
-                        url 'https://github.com/Glitchfiend/HoneyAndHell/issues'
+                        url 'https://github.com/Glitchfiend/HoneyNHell/issues'
                     }
                 
                     licenses {

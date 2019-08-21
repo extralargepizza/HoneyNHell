@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "honeynhell:gray_candle"
+    ]
+  },
+  "criteria": {
+    "has_candle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "honeynhell:white_candle"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "honeynhell:gray_candle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_candle",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,7 +1,0 @@
-{
-    "parent": "honeyandhell:block/three_candles",
-    "textures": {
-        "particle": "honeyandhell:block/magenta_candle",
-        "all": "honeyandhell:block/magenta_candle"
-    }
-}

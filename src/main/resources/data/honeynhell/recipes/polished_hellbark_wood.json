@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BSB",
+    "BSB",
+	"BSB"
+  ],
+  "key": {
+    "B": {
+      "item": "honeynhell:beeswax"
+    },
+    "S": [
+      {
+        "item": "biomesoplenty:stripped_hellbark_log"
+      },
+	  {
+        "item": "biomesoplenty:stripped_hellbark_wood"
+      }
+    ]
+  },
+  "result": {
+    "item": "honeynhell:polished_hellbark_wood",
+    "count": 6
+  }
+}

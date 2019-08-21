@@ -1,0 +1,7 @@
+{
+    "parent": "honeynhell:block/candle",
+    "textures": {
+        "particle": "honeynhell:block/pink_candle",
+        "all": "honeynhell:block/pink_candle"
+    }
+}

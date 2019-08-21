@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "honeynhell:honeycomb_block"
+    ]
+  },
+  "criteria": {
+    "has_honeycomb": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "honeynhell:honeycomb"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "honeynhell:honeycomb_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_honeycomb",
+      "has_the_recipe"
+    ]
+  ]
+}

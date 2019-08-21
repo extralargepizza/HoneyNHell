@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "B"
+  ],
+  "key": {
+    "B": {
+      "item": "honeynhell:beeswax"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "honeynhell:white_candle",
+    "count": 1
+  }
+}

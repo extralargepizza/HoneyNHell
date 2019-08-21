@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "honeynhell:block/polished_fir_wood" },
+        "axis=z":   { "model": "honeynhell:block/polished_fir_wood_horizontal" },
+        "axis=x":   { "model": "honeynhell:block/polished_fir_wood_horizontal", "y": 90 }
+    }
+}

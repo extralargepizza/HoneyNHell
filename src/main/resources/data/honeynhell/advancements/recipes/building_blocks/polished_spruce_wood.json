@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "honeynhell:polished_spruce_wood"
+    ]
+  },
+  "criteria": {
+    "has_beeswax": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "honeynhell:beeswax"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "honeynhell:polished_spruce_wood"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_beeswax",
+      "has_the_recipe"
+    ]
+  ]
+}
