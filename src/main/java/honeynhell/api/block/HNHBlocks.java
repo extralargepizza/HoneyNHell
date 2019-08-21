@@ -2,7 +2,7 @@ package honeynhell.api.block;
 
 import net.minecraft.block.Block;
 
-public class HAHBlocks
+public class HNHBlocks
 {
     public static Block bee_nest;
 

@@ -1,7 +1,7 @@
 package honeynhell.init;
 
-import honeynhell.api.block.HAHBlocks;
-import honeynhell.api.item.HAHItems;
+import honeynhell.api.block.HNHBlocks;
+import honeynhell.api.item.HNHItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ComposterBlock;
@@ -20,46 +20,46 @@ public class ModVanillaCompat
     public static void setup()
     {
         //Flammability
-        registerFlammable(HAHBlocks.wasp_nest_block, 30, 60);
-        registerFlammable(HAHBlocks.empty_honeycomb_block, 30, 60);
-        registerFlammable(HAHBlocks.honeycomb_block, 30, 60);
-        registerFlammable(HAHBlocks.filled_honeycomb_block, 30, 60);
+        registerFlammable(HNHBlocks.wasp_nest_block, 30, 60);
+        registerFlammable(HNHBlocks.empty_honeycomb_block, 30, 60);
+        registerFlammable(HNHBlocks.honeycomb_block, 30, 60);
+        registerFlammable(HNHBlocks.filled_honeycomb_block, 30, 60);
 
-        registerFlammable(HAHBlocks.polished_oak_wood, 5, 20);
-        registerFlammable(HAHBlocks.polished_spruce_wood, 5, 20);
-        registerFlammable(HAHBlocks.polished_birch_wood, 5, 20);
-        registerFlammable(HAHBlocks.polished_jungle_wood, 5, 20);
-        registerFlammable(HAHBlocks.polished_acacia_wood, 5, 20);
-        registerFlammable(HAHBlocks.polished_dark_oak_wood, 5, 20);
+        registerFlammable(HNHBlocks.polished_oak_wood, 5, 20);
+        registerFlammable(HNHBlocks.polished_spruce_wood, 5, 20);
+        registerFlammable(HNHBlocks.polished_birch_wood, 5, 20);
+        registerFlammable(HNHBlocks.polished_jungle_wood, 5, 20);
+        registerFlammable(HNHBlocks.polished_acacia_wood, 5, 20);
+        registerFlammable(HNHBlocks.polished_dark_oak_wood, 5, 20);
 
         if (ModList.get().isLoaded("biomesoplenty"))
         {
-            registerFlammable(HAHBlocks.polished_fir_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_redwood_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_cherry_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_mahogany_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_jacaranda_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_palm_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_willow_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_dead_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_magic_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_umbran_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_hellbark_wood, 5, 20);
-            registerFlammable(HAHBlocks.polished_ethereal_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_fir_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_redwood_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_cherry_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_mahogany_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_jacaranda_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_palm_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_willow_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_dead_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_magic_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_umbran_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_hellbark_wood, 5, 20);
+            registerFlammable(HNHBlocks.polished_ethereal_wood, 5, 20);
         }
 
         //Compostable
-        registerCompostable(0.3F, HAHBlocks.bee_nest);
-        registerCompostable(0.3F, HAHBlocks.wasp_nest_block);
-        registerCompostable(0.3F, HAHBlocks.empty_honeycomb_block);
-        registerCompostable(0.5F, HAHBlocks.honeycomb_block);
-        registerCompostable(0.5F, HAHItems.honeycomb);
-        registerCompostable(0.65F, HAHBlocks.filled_honeycomb_block);
-        registerCompostable(0.65F, HAHItems.filled_honeycomb);
-        registerCompostable(0.85F, HAHItems.honey_on_bread);
+        registerCompostable(0.3F, HNHBlocks.bee_nest);
+        registerCompostable(0.3F, HNHBlocks.wasp_nest_block);
+        registerCompostable(0.3F, HNHBlocks.empty_honeycomb_block);
+        registerCompostable(0.5F, HNHBlocks.honeycomb_block);
+        registerCompostable(0.5F, HNHItems.honeycomb);
+        registerCompostable(0.65F, HNHBlocks.filled_honeycomb_block);
+        registerCompostable(0.65F, HNHItems.filled_honeycomb);
+        registerCompostable(0.85F, HNHItems.honey_on_bread);
 
         //Mead Brewing Recipe
-        BrewingRecipeRegistry.addRecipe(Ingredient.fromStacks(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION), Potions.WATER)), Ingredient.fromStacks(new ItemStack(HAHItems.raw_honey)), new ItemStack(HAHItems.bottle_of_mead));
+        BrewingRecipeRegistry.addRecipe(Ingredient.fromStacks(PotionUtils.addPotionToItemStack(new ItemStack(Items.POTION), Potions.WATER)), Ingredient.fromStacks(new ItemStack(HNHItems.raw_honey)), new ItemStack(HNHItems.bottle_of_mead));
     }
 
     public static void registerFlammable(Block blockIn, int encouragement, int flammability)

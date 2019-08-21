@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2014-2019, the Honey & Hell Team
+ * Copyright 2014-2019, the Honey 'n' Hell Team
  * 
  * This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License.
  * 

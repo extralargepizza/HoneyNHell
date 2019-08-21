@@ -1,16 +1,12 @@
 package honeynhell.common.world.gen.feature;
 
 import com.mojang.datafixers.Dynamic;
-import honeynhell.api.block.HAHBlocks;
-import honeynhell.common.block.BeeNestBlock;
+import honeynhell.api.block.HNHBlocks;
 import honeynhell.common.util.block.IBlockPosQuery;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.GenerationSettings;
 import net.minecraft.world.gen.feature.Feature;
@@ -83,18 +79,18 @@ public class NetherWaspNestFeature extends Feature<NoFeatureConfig>
                     // inner layer. inset by one block
                     if (x2_z2 <= (radius - 1) * (radius - 1) + 1 && (x2_z2 >= (radius - 2) * (radius - 2) || innerCap))
                     {
-                        BlockState honeycomb = HAHBlocks.empty_honeycomb_block.getDefaultState();
+                        BlockState honeycomb = HNHBlocks.empty_honeycomb_block.getDefaultState();
                         float f = rand.nextFloat();
 
                         if (!empty && f <= 0.95)
                         {
-                            honeycomb = HAHBlocks.honeycomb_block.getDefaultState();
+                            honeycomb = HNHBlocks.honeycomb_block.getDefaultState();
 
                             // if on the bottom half of the hive bias more towards filled honeycomb.
                             // the rest of the hive can still have filled blocks though
                             if (f <= 0.2 || (f <= 0.65 && bottomHalf))
                             {
-                                honeycomb = HAHBlocks.filled_honeycomb_block.getDefaultState();
+                                honeycomb = HNHBlocks.filled_honeycomb_block.getDefaultState();
                             }
                         }
                         else if (empty && f <= 0.2)
@@ -111,7 +107,7 @@ public class NetherWaspNestFeature extends Feature<NoFeatureConfig>
                     {
                         // fill the centre of the hive with honey blocks honey
                         //TODO: Replace water with liquid honey
-                        BlockState fillBlock = yOffset == 0 ? HAHBlocks.crystallized_honey.getDefaultState() : Blocks.WATER.getDefaultState();
+                        BlockState fillBlock = yOffset == 0 ? HNHBlocks.crystallized_honey.getDefaultState() : Blocks.WATER.getDefaultState();
 
                         // only replace air blocks, not the hive layers
                         if (world.getBlockState(realPos).isAir(world, realPos))
@@ -153,7 +149,7 @@ public class NetherWaspNestFeature extends Feature<NoFeatureConfig>
                     if (x2_z2 <= radius * radius + 1 && (x2_z2 >= (radius - 1) * (radius - 1) || outerCap))
                     {
                         // offset so we're placing the hive underneath the initial y coordinate
-                        world.setBlockState(realPos, HAHBlocks.wasp_nest_block.getDefaultState(), 2);
+                        world.setBlockState(realPos, HNHBlocks.wasp_nest_block.getDefaultState(), 2);
                     }
                 }
             }

@@ -4,7 +4,7 @@ import honeynhell.common.block.BeeNestBlock;
 import honeynhell.common.block.BeehiveBlock;
 import honeynhell.common.block.CandleBlock;
 import honeynhell.common.block.CrystallizedHoneyBlock;
-import honeynhell.common.util.inventory.ItemGroupHAH;
+import honeynhell.common.util.inventory.ItemGroupHNH;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.RotatedPillarBlock;
@@ -19,7 +19,7 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static honeynhell.api.block.HAHBlocks.*;
+import static honeynhell.api.block.HNHBlocks.*;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBlocks
@@ -80,7 +80,7 @@ public class ModBlocks
 
     public static Block registerBlock(Block block, String name)
     {
-        BlockItem itemBlock = new BlockItem(block, new Item.Properties().group(ItemGroupHAH.instance));
+        BlockItem itemBlock = new BlockItem(block, new Item.Properties().group(ItemGroupHNH.instance));
         block.setRegistryName(name);
         itemBlock.setRegistryName(name);
         ForgeRegistries.BLOCKS.register(block);

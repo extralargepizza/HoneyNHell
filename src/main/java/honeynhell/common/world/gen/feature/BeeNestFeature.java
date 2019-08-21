@@ -1,9 +1,8 @@
 package honeynhell.common.world.gen.feature;
 
 import com.mojang.datafixers.Dynamic;
-import honeynhell.api.block.HAHBlocks;
+import honeynhell.api.block.HNHBlocks;
 import honeynhell.common.block.BeeNestBlock;
-import net.minecraft.block.Blocks;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -33,7 +32,7 @@ public class BeeNestFeature extends Feature<NoFeatureConfig>
             BlockPos blockpos = p_212245_4_.add(p_212245_3_.nextInt(8) - p_212245_3_.nextInt(8), p_212245_3_.nextInt(8) - p_212245_3_.nextInt(8), p_212245_3_.nextInt(8) - p_212245_3_.nextInt(8));
             if (p_212245_1_.getBlockState(blockpos).isAir(p_212245_1_, blockpos) && p_212245_1_.getBlockState(blockpos.down()).isAir(p_212245_1_, blockpos.down()) && p_212245_1_.getBlockState(blockpos.up()).getBlock().isIn(BlockTags.LEAVES) && !p_212245_1_.getBlockState(blockpos.up().north()).isAir(p_212245_1_, blockpos.up().north()) && !p_212245_1_.getBlockState(blockpos.up().south()).isAir(p_212245_1_, blockpos.up().south()) && !p_212245_1_.getBlockState(blockpos.up().east()).isAir(p_212245_1_, blockpos.up().east()) && !p_212245_1_.getBlockState(blockpos.up().west()).isAir(p_212245_1_, blockpos.up().west()))
             {
-                p_212245_1_.setBlockState(blockpos, HAHBlocks.bee_nest.getDefaultState().with(BeeNestBlock.HORIZONTAL_FACING, Direction.byIndex(2 + p_212245_3_.nextInt(4))), 2);
+                p_212245_1_.setBlockState(blockpos, HNHBlocks.bee_nest.getDefaultState().with(BeeNestBlock.HORIZONTAL_FACING, Direction.byIndex(2 + p_212245_3_.nextInt(4))), 2);
 
                 ++i;
             }

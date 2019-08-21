@@ -1,6 +1,6 @@
 package honeynhell.init;
 
-import honeynhell.api.block.HAHBlocks;
+import honeynhell.api.block.HNHBlocks;
 import honeynhell.common.tileentity.BeehiveTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
@@ -17,7 +17,7 @@ public class ModTileEntities
     @SubscribeEvent
     public static void registerTileEntities(RegistryEvent.Register<TileEntityType<?>> event)
     {
-        BEEHIVE = registerTileEntityType(TileEntityType.Builder.<BeehiveTileEntity>create(BeehiveTileEntity::new, HAHBlocks.beehive).build(null), "beehive");
+        BEEHIVE = registerTileEntityType(TileEntityType.Builder.<BeehiveTileEntity>create(BeehiveTileEntity::new, HNHBlocks.beehive).build(null), "beehive");
     }
 
     public static <T extends TileEntity> TileEntityType<T> registerTileEntityType(TileEntityType<T> tileEntityType, String name)

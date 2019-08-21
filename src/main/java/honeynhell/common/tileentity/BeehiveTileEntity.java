@@ -1,6 +1,6 @@
 package honeynhell.common.tileentity;
 
-import honeynhell.api.block.HAHBlocks;
+import honeynhell.api.block.HNHBlocks;
 import honeynhell.init.ModTileEntities;
 import net.minecraft.block.BarrelBlock;
 import net.minecraft.block.BlockState;
@@ -145,7 +145,7 @@ public class BeehiveTileEntity extends LockableLootTileEntity {
             this.func_213964_r();
         } else {
             BlockState lvt_4_1_ = this.getBlockState();
-            if (lvt_4_1_.getBlock() != HAHBlocks.beehive) {
+            if (lvt_4_1_.getBlock() != HNHBlocks.beehive) {
                 this.remove();
                 return;
             }

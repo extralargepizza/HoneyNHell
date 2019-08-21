@@ -2,7 +2,7 @@ package honeynhell.api.item;
 
 import net.minecraft.item.Item;
 
-public class HAHItems
+public class HNHItems
 {
     public static Item hnh_icon;
 
